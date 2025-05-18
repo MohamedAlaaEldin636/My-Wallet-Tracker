@@ -23,5 +23,6 @@ dependencyResolutionManagement {
 rootProject.name = "My Wallet Tracker"
 
 include(":core")
+include(":core:ui")
 
 include(":app")

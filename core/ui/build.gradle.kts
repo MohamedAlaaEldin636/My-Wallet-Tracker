@@ -1,21 +1,17 @@
 plugins {
-	alias(libs.plugins.android.application)
+	alias(libs.plugins.android.library)
 	alias(libs.plugins.kotlin.android)
-	alias(libs.plugins.kotlin.compose)
 }
 
 android {
-	namespace = "my.ym.my_wallet_tracker"
+	namespace = "my.ym.core_ui"
 	compileSdk = 35
 
 	defaultConfig {
-		applicationId = "my.ym.my_wallet_tracker"
 		minSdk = 24
-		targetSdk = 35
-		versionCode = 1
-		versionName = "1.0"
 
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+		consumerProguardFiles("consumer-rules.pro")
 	}
 
 	buildTypes {
@@ -34,26 +30,16 @@ android {
 	kotlinOptions {
 		jvmTarget = "11"
 	}
-	buildFeatures {
-		compose = true
-	}
 }
 
 dependencies {
 
 	// Androidx Core
 	implementation(libs.androidx.core.ktx)
-	implementation(libs.androidx.activity.compose)
-	implementation(libs.androidx.lifecycle.runtime.ktx)
 
 	// Androidx Compose
 	implementation(platform(libs.androidx.compose.bom))
-	implementation(libs.androidx.compose.ui)
-	implementation(libs.androidx.compose.ui.graphics)
-	implementation(libs.androidx.compose.ui.tooling.preview)
 	implementation(libs.androidx.compose.material3)
-	debugImplementation(libs.androidx.compose.ui.tooling)
-	debugImplementation(libs.androidx.compose.ui.test.manifest)
 
 	// ---- Testing ---- //
 
@@ -61,11 +47,7 @@ dependencies {
 	testImplementation(libs.junit)
 
 	// Androidx Test
-	androidTestImplementation(platform(libs.androidx.compose.bom))
 	androidTestImplementation(libs.androidx.test.junit)
 	androidTestImplementation(libs.androidx.test.espresso.core)
-
-	// Androidx Compose
-	androidTestImplementation(libs.androidx.compose.ui.test.junit4)
 
 }
