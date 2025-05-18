@@ -6,14 +6,14 @@ plugins {
 
 android {
 	namespace = "my.ym.my_wallet_tracker"
-	compileSdk = 35
+	compileSdk = libs.versions.compileSdk.get().toInt()
 
 	defaultConfig {
 		applicationId = "my.ym.my_wallet_tracker"
-		minSdk = 24
-		targetSdk = 35
-		versionCode = 1
-		versionName = "1.0"
+		minSdk = libs.versions.minSdk.get().toInt()
+		targetSdk = libs.versions.targetSdk.get().toInt()
+		versionCode = libs.versions.versionCode.get().toInt()
+		versionName = libs.versions.versionName.get()
 
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 	}
@@ -41,19 +41,36 @@ android {
 
 dependencies {
 
+	// Local Modules
+	implementation(projects.core)
+	implementation(projects.core.ui)
+	implementation(projects.ui.transactions)
+
+	// Androidx Core
 	implementation(libs.androidx.core.ktx)
-	implementation(libs.androidx.lifecycle.runtime.ktx)
 	implementation(libs.androidx.activity.compose)
+	implementation(libs.androidx.lifecycle.runtime.ktx)
+
+	// Androidx Compose
 	implementation(platform(libs.androidx.compose.bom))
-	implementation(libs.androidx.ui)
-	implementation(libs.androidx.ui.graphics)
-	implementation(libs.androidx.ui.tooling.preview)
-	implementation(libs.androidx.material3)
+	implementation(libs.androidx.compose.ui)
+	implementation(libs.androidx.compose.ui.graphics)
+	implementation(libs.androidx.compose.ui.tooling.preview)
+	implementation(libs.androidx.compose.material3)
+	debugImplementation(libs.androidx.compose.ui.tooling)
+	debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+	// ---- Testing ---- //
+
+	// junit
 	testImplementation(libs.junit)
-	androidTestImplementation(libs.androidx.junit)
-	androidTestImplementation(libs.androidx.espresso.core)
+
+	// Androidx Test
 	androidTestImplementation(platform(libs.androidx.compose.bom))
-	androidTestImplementation(libs.androidx.ui.test.junit4)
-	debugImplementation(libs.androidx.ui.tooling)
-	debugImplementation(libs.androidx.ui.test.manifest)
+	androidTestImplementation(libs.androidx.test.junit)
+	androidTestImplementation(libs.androidx.test.espresso.core)
+
+	// Androidx Compose
+	androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+
 }
