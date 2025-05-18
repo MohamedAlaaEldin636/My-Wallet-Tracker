@@ -41,6 +41,9 @@ android {
 
 dependencies {
 
+	// Local Modules
+	implementation(projects.core.ui)
+
 	// Androidx Core
 	implementation(libs.androidx.core.ktx)
 	implementation(libs.androidx.activity.compose)

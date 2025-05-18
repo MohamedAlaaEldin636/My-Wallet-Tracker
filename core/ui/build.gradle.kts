@@ -34,6 +34,9 @@ android {
 
 dependencies {
 
+	// Local Modules
+	implementation(projects.core)
+
 	// Androidx Core
 	implementation(libs.androidx.core.ktx)
 

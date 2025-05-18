@@ -20,7 +20,10 @@ dependencyResolutionManagement {
 	}
 }
 
-rootProject.name = "My Wallet Tracker"
+// Used to be able to use local module via projects.* in gradle inshallah
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+rootProject.name = "MyWalletTracker"
 
 include(":core")
 include(":core:ui")
