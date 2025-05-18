@@ -4,7 +4,8 @@
 
 - This is an Android Project (Open Source) About Personal Finance Tracking inshallah.
 
-- TODO (del this note later), Check your Lark for more details inshallah.
+- TODO (del this note later), Check your Lark for more details inshallah,
+Also add remaining data here, ex. preview, tech. used etc... .
 
 ## Project Structure
 
