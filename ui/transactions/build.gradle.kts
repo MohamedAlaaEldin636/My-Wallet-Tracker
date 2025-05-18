@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-	namespace = "my.ym.data"
+	namespace = "my.ym.ui_transactions"
 	compileSdk = libs.versions.compileSdk.get().toInt()
 
 	defaultConfig {
@@ -33,6 +33,9 @@ android {
 }
 
 dependencies {
+
+	// Local Modules
+	implementation(projects.ui)
 
 	// Androidx Core
 	implementation(libs.androidx.core.ktx)

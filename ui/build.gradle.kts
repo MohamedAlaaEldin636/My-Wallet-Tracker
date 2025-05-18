@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-	namespace = "my.ym.data"
+	namespace = "my.ym.ui"
 	compileSdk = libs.versions.compileSdk.get().toInt()
 
 	defaultConfig {

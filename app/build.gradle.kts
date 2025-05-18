@@ -6,14 +6,14 @@ plugins {
 
 android {
 	namespace = "my.ym.my_wallet_tracker"
-	compileSdk = 35
+	compileSdk = libs.versions.compileSdk.get().toInt()
 
 	defaultConfig {
 		applicationId = "my.ym.my_wallet_tracker"
-		minSdk = 24
-		targetSdk = 35
+		minSdk = libs.versions.minSdk.get().toInt()
+		targetSdk = libs.versions.targetSdk.get().toInt()
 		versionCode = 1
-		versionName = "1.0"
+		versionName = "1.0.0"
 
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 	}

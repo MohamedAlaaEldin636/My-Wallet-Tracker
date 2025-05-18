@@ -16,6 +16,8 @@
             <option value="$PROJECT_DIR$/data/transactions" />
             <option value="$PROJECT_DIR$/domain" />
             <option value="$PROJECT_DIR$/domain/transactions" />
+            <option value="$PROJECT_DIR$/ui" />
+            <option value="$PROJECT_DIR$/ui/transactions" />
           </set>
         </option>
       </GradleProjectSettings>

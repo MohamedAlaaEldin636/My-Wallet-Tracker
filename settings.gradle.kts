@@ -35,4 +35,7 @@ include(":data:transactions")
 include(":domain")
 include(":domain:transactions")
 
+include(":ui")
+include(":ui:transactions")
+
 include(":app")
