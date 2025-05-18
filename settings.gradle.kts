@@ -29,3 +29,5 @@ include(":core")
 include(":core:ui")
 
 include(":app")
+include(":data")
+include(":data:transactions")

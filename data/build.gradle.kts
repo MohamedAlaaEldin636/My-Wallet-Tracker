@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-	namespace = "my.ym.core_ui"
+	namespace = "my.ym.data"
 	compileSdk = 35
 
 	defaultConfig {

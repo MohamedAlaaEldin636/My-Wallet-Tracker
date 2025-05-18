@@ -42,6 +42,7 @@ android {
 dependencies {
 
 	// Local Modules
+	implementation(projects.core)
 	implementation(projects.core.ui)
 
 	// Androidx Core
