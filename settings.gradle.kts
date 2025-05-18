@@ -14,6 +14,7 @@ pluginManagement {
 
 dependencyResolutionManagement {
 	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+
 	repositories {
 		google()
 		mavenCentral()
@@ -28,6 +29,10 @@ rootProject.name = "MyWalletTracker"
 include(":core")
 include(":core:ui")
 
-include(":app")
 include(":data")
 include(":data:transactions")
+
+include(":domain")
+include(":domain:transactions")
+
+include(":app")
